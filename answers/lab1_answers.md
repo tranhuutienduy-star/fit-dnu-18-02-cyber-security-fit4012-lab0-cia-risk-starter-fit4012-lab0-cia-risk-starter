@@ -10,47 +10,22 @@
 ---
 
 ## 1. Assets
-Liệt kê ít nhất 2 assets cần bảo vệ.
-
-- Asset 1: Dữ liệu nhạy cảm
-- Asset 2: Hạ tầng hệ thống và Thiết bị
-- Asset 3 (nếu có):
----
+Asset 1: Dữ liệu điểm của sinh viên  
+Asset 2: Tài khoản đăng nhập (giảng viên, sinh viên)  
+Asset 3: Hệ thống máy chủ lưu trữ dữ liệu  
 
 ## 2. Mapping CIA
-Ghép từng sự cố với CIA.
-
-- Sự cố A (Rò rỉ dữ liệu) -> Confidentiality (Tính bảo mật)
-
-Ví dụ: Hacker đánh cắp danh sách mật khẩu người dùng hoặc thông tin thẻ tín dụng.
-
-- Sự cố B (Sửa đổi dữ liệu) -> Integrity (Tính toàn vẹn)
-
-Ví dụ: Hacker xâm nhập hệ thống ngân hàng để thay đổi số dư tài khoản hoặc sửa điểm sinh viên.
-
-- Sự cố C (Tấn công từ chối dịch vụ) -> Availability (Tính khả dụng)
-
-Ví dụ: Tấn công DDoS làm sập trang web hoặc Ransomware mã hóa dữ liệu khiến người dùng không thể truy cập.
-
+Sự cố A -> Availability  
+Sự cố B -> Integrity  
+Sự cố C -> Confidentiality  
 
 ## 3. Phân tích sự cố B
-Giả sử sự cố B là việc hacker thay đổi cơ sở dữ liệu của một phần mềm quản lý (như dự án Java bạn từng làm):
-- Threat (Mối đe dọa): Tin tặc (Hacker) hoặc nhân viên nội bộ có ý đồ xấu muốn thay đổi thông tin để trục lợi.
-- Vulnerability (Lỗ hổng):  Hệ thống thiếu kiểm soát truy cập (Access Control) chặt chẽ, không có cơ chế kiểm tra tính toàn vẹn (Hashing), hoặc tồn tại lỗ hổng SQL Injection.
-- Mitigation (Biện pháp giảm thiểu): Sử dụng các thuật toán băm (SHA-256) để kiểm tra tính toàn vẹn, thiết lập quyền truy cập tối thiểu (Least Privilege) và thực hiện sao lưu (Backup) định kỳ để khôi phục khi cần.
-
----
+Threat: Người dùng trái phép (hacker hoặc nội bộ) chỉnh sửa điểm  
+Vulnerability: Hệ thống không có kiểm soát quyền truy cập hoặc không ghi log thay đổi  
+Mitigation: Áp dụng phân quyền (RBAC) và ghi log/audit mọi thay đổi dữ liệu  
 
 ## 4. Reflection
-Viết 5-7 dòng.
-Qua việc tìm hiểu về an ninh mạng và an toàn thông tin, em nhận thấy bảo mật không chỉ đơn thuần là cài đặt phần mềm diệt virus mà là một hệ thống phòng thủ đa tầng (Defense-in-depth). Tam giác CIA là kim chỉ nam giúp xác định mục tiêu bảo vệ, trong đó tính bảo mật, toàn vẹn và khả dụng luôn phải cân bằng. Đặc biệt, con người thường là mắt xích yếu nhất, vì vậy việc tuân thủ các chính sách và quy trình là cực kỳ quan trọng. Hiểu rõ các lỗ hổng giúp em có tư duy lập trình an toàn hơn trong các dự án phần mềm sau này.
-
-
----
+Nếu là quản trị viên hệ thống, em sẽ ưu tiên xử lý sự cố B trước. Vì đây là vấn đề liên quan đến tính toàn vẹn dữ liệu (Integrity), ảnh hưởng trực tiếp đến kết quả học tập của sinh viên và uy tín của hệ thống. Nếu dữ liệu bị thay đổi sai lệch, hậu quả sẽ nghiêm trọng hơn so với việc hệ thống tạm thời không truy cập được. Sau đó, em sẽ xử lý sự cố C để đảm bảo bảo mật dữ liệu và cuối cùng là cải thiện hệ thống để tránh lỗi Availability như sự cố A.
 
 ## 5. Bonus Flag
-`FIT4012{A-?-B-?-C-?}`
-Dựa trên thứ tự sắp xếp phổ biến trong giáo trình (C-I-A), Flag của em là:
-
-Flag của em: FIT4012{A-Confidentiality-B-Integrity-C-Availability}
-
+FIT4012{A-A-B-I-C-C}
