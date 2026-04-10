@@ -26,7 +26,7 @@ Vulnerability: No access control and no logging
 Mitigation: Apply access control and logging
 
 ## 4. Reflection
-I will prioritize fixing integrity issues first because incorrect data can seriously affect the system and users. Ensuring data accuracy is more important than availability or confidentiality at the beginning.
+I will prioritize fixing integrity issues first because incorrect data can seriously affect the system and users. Ensuring data accuracy is more important than availability or confidentiality.
 
 ## 5. Bonus Flag
 FIT4012{A-A-B-I-C-C}
