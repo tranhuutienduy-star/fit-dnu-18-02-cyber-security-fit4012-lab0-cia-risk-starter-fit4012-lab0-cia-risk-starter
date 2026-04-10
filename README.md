@@ -74,7 +74,6 @@ Viết flag theo định dạng:
 `FIT4012{A-?-B-?-C-?}`
 
 trong đó `?` là một trong ba ký hiệu `C/I/A`.
-
 ---
 Flag:
 FIT4012{A-A-B-I-C-C}
