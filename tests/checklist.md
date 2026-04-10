@@ -14,8 +14,8 @@ Sinh viên tự kiểm trước khi nộp bài.
 - [x] Tôi đã sẵn sàng nộp link repo lên hệ thống submission.
 
 ## 5 tự kiểm về nội dung chuyên môn
-- [X] Tôi đã nêu ít nhất 2 assets.
-- [X] Tôi đã ghép đủ 3 sự cố với CIA.
-- [X] Tôi đã phân biệt được threat và vulnerability.
-- [X] Tôi đã nêu được một mitigation cụ thể cho sự cố B.
-- [X] Tôi đã viết reflection ngắn gọn, có lập luận.
+- [x] Tôi đã nêu ít nhất 2 assets.
+- [x] Tôi đã ghép đủ 3 sự cố với CIA.
+- [x] Tôi đã phân biệt được threat và vulnerability.
+- [x] Tôi đã nêu được một mitigation cụ thể cho sự cố B.
+- [x] Tôi đã viết reflection ngắn gọn, có lập luận.
