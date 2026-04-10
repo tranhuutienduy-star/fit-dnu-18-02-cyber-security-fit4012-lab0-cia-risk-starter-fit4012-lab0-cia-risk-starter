@@ -35,23 +35,38 @@ Sinh viên hoàn thành các phần sau trong file `answers/lab1_answers.md` và
 
 ### Phần 1. Assets
 Liệt kê **ít nhất 2 assets** cần được bảo vệ trong hệ thống trên.
+Các tài sản (assets) cần bảo vệ trong hệ thống:
+1.Dữ liệu điểm của sinh viên
+2.Tài khoản đăng nhập (giảng viên, sinh viên)
+3.Hệ thống máy chủ lưu trữ dữ liệu điểm
+4.Ứng dụng/web quản lý điểm
 
 ### Phần 2. Mapping CIA
 Ghép từng sự cố **A/B/C** với một mục tiêu chính trong bộ ba **CIA**:
 - **C** - Confidentiality
 - **I** - Integrity
 - **A** - Availability
+- Sự cố A → Availability (A)
+→ Sinh viên không đăng nhập được → hệ thống không sẵn sàng
+- Sự cố B → Integrity (I)
+→ Điểm bị thay đổi từ 8.0 → 5.0 → dữ liệu bị sai lệch
+- Sự cố C → Confidentiality (C)
+→ Danh sách điểm bị lộ → mất tính bảo mật
 
 ### Phần 3. Phân tích sự cố B
 Với sự cố **B**, hãy nêu:
-- **1 threat**
-- **1 vulnerability**
-- **1 mitigation**
+- **1 threat** : Người dùng trái phép (hacker hoặc nội bộ) chỉnh sửa điểm
+- **1 vulnerability**: Hệ thống không có kiểm soát quyền truy cập hoặc không ghi log thay đổi dữ liệu
+- **1 mitigation** : Áp dụng phân quyền chặt chẽ (role-based access control) và ghi log/audit mọi thay đổi điểm
 
 ### Phần 4. Reflection
 Viết **5-7 dòng** trả lời câu hỏi:
 
 > Nếu là quản trị viên hệ thống, em sẽ ưu tiên xử lý vấn đề nào trước? Vì sao?
+> Nếu là quản trị viên hệ thống, em sẽ ưu tiên xử lý sự cố B trước.
+Vì đây là vấn đề liên quan đến tính toàn vẹn dữ liệu (Integrity), ảnh hưởng trực tiếp đến kết quả học tập của sinh viên và uy tín của hệ thống.
+Nếu dữ liệu bị thay đổi sai lệch, hậu quả có thể nghiêm trọng hơn so với việc hệ thống tạm thời không truy cập được hoặc bị lộ thông tin.
+Sau đó, em sẽ xử lý sự cố C để đảm bảo bảo mật dữ liệu và cuối cùng là cải thiện hệ thống để tránh lỗi Availability như sự cố A.
 
 ### Phần 5. Bonus (khuyến khích)
 Viết flag theo định dạng:
@@ -61,6 +76,8 @@ Viết flag theo định dạng:
 trong đó `?` là một trong ba ký hiệu `C/I/A`.
 
 ---
+Flag:
+FIT4012{A-A-B-I-C-C}
 
 ## 4. Cấu trúc repo
 ```text
