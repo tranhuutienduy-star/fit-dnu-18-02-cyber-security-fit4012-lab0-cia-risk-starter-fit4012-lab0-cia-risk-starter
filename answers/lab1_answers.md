@@ -15,7 +15,6 @@ Liệt kê ít nhất 2 assets cần bảo vệ.
 - Asset 1: Dữ liệu nhạy cảm
 - Asset 2: Hạ tầng hệ thống và Thiết bị
 - Asset 3 (nếu có):
-
 ---
 
 ## 2. Mapping CIA
